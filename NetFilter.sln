@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sql.Data", "Sql.Data\Sql.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "redis-test", "redis-test\redis-test.csproj", "{FB77BE77-7142-4A58-8E17-0B2CE1DACE1B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "自启动过滤筛选器", "自启动过滤筛选器\自启动过滤筛选器.csproj", "{C2DC3247-C1F5-4F94-AC51-57BA4079641A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FB77BE77-7142-4A58-8E17-0B2CE1DACE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB77BE77-7142-4A58-8E17-0B2CE1DACE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB77BE77-7142-4A58-8E17-0B2CE1DACE1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2DC3247-C1F5-4F94-AC51-57BA4079641A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2DC3247-C1F5-4F94-AC51-57BA4079641A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2DC3247-C1F5-4F94-AC51-57BA4079641A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2DC3247-C1F5-4F94-AC51-57BA4079641A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

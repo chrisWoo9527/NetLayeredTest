@@ -1,4 +1,4 @@
-﻿namespace NetLayeredTest.Dto
+﻿namespace ExceptionFilterTest.Dto
 {
 
     public class BookDto

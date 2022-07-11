@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ExceptionFilterTest.Dto;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NetLayeredTest.Dto;
 using Sql.Data;
 
-namespace NetLayeredTest.Controllers
+namespace ExceptionFilterTest.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -19,7 +19,7 @@ namespace NetLayeredTest.Controllers
         [HttpPost]
         public async Task<ActionResult<string>> AddBook(BookDto input)
         {
-            await _testDbContext.Books.AddAsync(new Book {  Title = input.Title, Author = input.Author, PubTime = input.PubTime });
+            await _testDbContext.Books.AddAsync(new Book { Title = input.Title, Author = input.Author, PubTime = input.PubTime });
             await _testDbContext.SaveChangesAsync();
             return "ok";
         }

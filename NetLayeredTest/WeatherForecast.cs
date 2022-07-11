@@ -1,4 +1,4 @@
-namespace NetLayeredTest
+namespace ExceptionFilterTest
 {
     public class WeatherForecast
     {

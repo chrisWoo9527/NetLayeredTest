@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace NetLayeredTest.Controllers
+namespace ExceptionFilterTest.Controllers
 {
     [ApiController]
     [Route("[controller]")]

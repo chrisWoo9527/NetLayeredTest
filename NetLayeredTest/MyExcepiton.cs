@@ -30,9 +30,6 @@ namespace ExceptionFilterTest
             ObjectResult obj = new ObjectResult(new { code = 200, message = msg });
             context.Result = obj;
             context.ExceptionHandled = true;   // true 代表这个异常已经被处理过了
-
-
-
         }
     }
 }

@@ -20,6 +20,9 @@ namespace Sql.Data
         [MaxLength(50)]
         public string Author { get; set; }
 
+        public decimal? Price { get; set; }
+
         public DateTime? PubTime { get; set; }
+
     }
 }

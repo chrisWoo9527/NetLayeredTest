@@ -3,7 +3,7 @@
     // 使用在方法中
 
     [AttributeUsage(AttributeTargets.Method)]
-    public class NoTransactionScopeAttribute : Attribute
+    public class NotTransactionalAttribute : Attribute
     {
     }
 }

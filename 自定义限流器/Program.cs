@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Sql.Data;
-using 自启动过滤筛选器;
+using 自定义限流器;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,8 +9,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.Configure<MvcOptions>(opts => { opts.Filters.Add<TransactionScopeFilter>(); });
-builder.Services.AddDbContext<TestDbContext>(opts => { opts.UseSqlServer(builder.Configuration.GetSection("Conn").Value); });
+builder.Services.AddMemoryCache();
+
+builder.Services.AddStackExchangeRedisCache(opts =>
+{
+    opts.InstanceName = "DisCache_";
+    opts.Configuration = "192.168.136.130:8081,defaultDatabase=8";
+});
+builder.Services.Configure<MvcOptions>(opts => opts.Filters.Add<DistributeTimesRestrictorActionFilter>());
 
 var app = builder.Build();
 
